@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.neo4j.driver:neo4j-java-driver:5.28.5'
+}
+
+application {
+    mainClass = 'com.example.app.mainclass'
+}
+
+shadowJar {
+    archiveBaseName.set('Proy2-AED-all')
+    archiveClassifier.set('')
+    archiveVersion.set('1.0-SNAPSHOT')
+    mergeServiceFiles()
+}

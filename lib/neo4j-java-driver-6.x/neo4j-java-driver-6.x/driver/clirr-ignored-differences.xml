@@ -1,0 +1,821 @@
+<differences>
+    <!--4.0 drivers is not API compatible with 1.0 drivers, as a result we reset API differences from 4.0.0-->
+
+    <difference>
+        <className>org/neo4j/driver/summary/ServerInfo</className>
+        <differenceType>7007</differenceType>
+        <method>java.lang.String version()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/summary/ServerInfo</className>
+        <differenceType>7012</differenceType>
+        <method>java.lang.String protocolVersion()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/summary/ServerInfo</className>
+        <differenceType>7012</differenceType>
+        <method>java.lang.String agent()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Logger</className>
+        <differenceType>7012</differenceType>
+        <method>void debug(java.lang.String, java.lang.Throwable)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Logging</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.Logger getLog(java.lang.Class)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncTransaction</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.concurrent.CompletionStage closeAsync()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxTransaction</className>
+        <differenceType>7012</differenceType>
+        <method>org.reactivestreams.Publisher close()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/summary/ServerInfo</className>
+        <differenceType>7002</differenceType>
+        <method>java.lang.String version()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Record</className>
+        <differenceType>7012</differenceType>
+        <method>java.lang.Iterable keys()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Record</className>
+        <differenceType>7012</differenceType>
+        <method>java.lang.Iterable values()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7002</differenceType>
+        <method>void reset()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Config$ConfigBuilder</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.Config$ConfigBuilder withRoutingFailureLimit(int)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Config$ConfigBuilder</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.Config$ConfigBuilder withRoutingRetryDelay(long, java.util.concurrent.TimeUnit)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Config$TrustStrategy</className>
+        <differenceType>7005</differenceType>
+        <method>org.neo4j.driver.Config$TrustStrategy trustCustomCertificateSignedBy(java.io.File)</method>
+        <to>org.neo4j.driver.Config$TrustStrategy trustCustomCertificateSignedBy(java.io.File[])</to>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/types/Entity</className>
+        <differenceType>7012</differenceType>
+        <method>java.lang.String elementId()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/types/Relationship</className>
+        <differenceType>7012</differenceType>
+        <method>java.lang.String endNodeElementId()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/types/Relationship</className>
+        <differenceType>7012</differenceType>
+        <method>java.lang.String startNodeElementId()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Result</className>
+        <differenceType>7012</differenceType>
+        <method>boolean isOpen()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/ResultCursor</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.concurrent.CompletionStage isOpenAsync()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxResult</className>
+        <differenceType>7012</differenceType>
+        <method>org.reactivestreams.Publisher isOpen()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7012</differenceType>
+        <method>java.lang.Object executeRead(org.neo4j.driver.TransactionCallback)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7012</differenceType>
+        <method>java.lang.Object executeRead(org.neo4j.driver.TransactionCallback, org.neo4j.driver.TransactionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7012</differenceType>
+        <method>void executeReadWithoutResult(java.util.function.Consumer)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7012</differenceType>
+        <method>void executeReadWithoutResult(java.util.function.Consumer, org.neo4j.driver.TransactionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7012</differenceType>
+        <method>java.lang.Object executeWrite(org.neo4j.driver.TransactionCallback)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7012</differenceType>
+        <method>java.lang.Object executeWrite(org.neo4j.driver.TransactionCallback, org.neo4j.driver.TransactionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7012</differenceType>
+        <method>void executeWriteWithoutResult(java.util.function.Consumer)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7012</differenceType>
+        <method>void executeWriteWithoutResult(java.util.function.Consumer, org.neo4j.driver.TransactionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncSession</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.concurrent.CompletionStage executeReadAsync(org.neo4j.driver.async.AsyncTransactionCallback)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncSession</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.concurrent.CompletionStage executeReadAsync(org.neo4j.driver.async.AsyncTransactionCallback, org.neo4j.driver.TransactionConfig)
+        </method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncSession</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.concurrent.CompletionStage executeReadWithoutResultAsync(java.util.function.Consumer)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncSession</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.concurrent.CompletionStage executeReadWithoutResultAsync(java.util.function.Consumer, org.neo4j.driver.TransactionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncSession</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.concurrent.CompletionStage executeWriteAsync(org.neo4j.driver.async.AsyncTransactionCallback)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncSession</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.concurrent.CompletionStage executeWriteAsync(org.neo4j.driver.async.AsyncTransactionCallback, org.neo4j.driver.TransactionConfig)
+        </method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncSession</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.concurrent.CompletionStage executeWriteWithoutResultAsync(java.util.function.Consumer)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncSession</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.concurrent.CompletionStage executeWriteWithoutResultAsync(java.util.function.Consumer, org.neo4j.driver.TransactionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxSession</className>
+        <differenceType>7012</differenceType>
+        <method>org.reactivestreams.Publisher executeRead(org.neo4j.driver.reactive.RxTransactionCallback)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxSession</className>
+        <differenceType>7012</differenceType>
+        <method>org.reactivestreams.Publisher executeRead(org.neo4j.driver.reactive.RxTransactionCallback, org.neo4j.driver.TransactionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxSession</className>
+        <differenceType>7012</differenceType>
+        <method>org.reactivestreams.Publisher executeReadWithoutResult(java.util.function.Consumer)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxSession</className>
+        <differenceType>7012</differenceType>
+        <method>org.reactivestreams.Publisher executeReadWithoutResult(java.util.function.Consumer, org.neo4j.driver.TransactionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxSession</className>
+        <differenceType>7012</differenceType>
+        <method>org.reactivestreams.Publisher executeWrite(org.neo4j.driver.reactive.RxTransactionCallback)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxSession</className>
+        <differenceType>7012</differenceType>
+        <method>org.reactivestreams.Publisher executeWrite(org.neo4j.driver.reactive.RxTransactionCallback, org.neo4j.driver.TransactionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxSession</className>
+        <differenceType>7012</differenceType>
+        <method>org.reactivestreams.Publisher executeWriteWithoutResult(java.util.function.Consumer)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxSession</className>
+        <differenceType>7012</differenceType>
+        <method>org.reactivestreams.Publisher executeWriteWithoutResult(java.util.function.Consumer, org.neo4j.driver.TransactionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncTransaction</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.concurrent.CompletionStage isOpenAsync()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxTransaction</className>
+        <differenceType>7012</differenceType>
+        <method>org.reactivestreams.Publisher isOpen()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.reactive.ReactiveSession reactiveSession()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.reactive.ReactiveSession reactiveSession(org.neo4j.driver.SessionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxQueryRunner</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.Value parameters(org.neo4j.driver.Record)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxQueryRunner</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.Value parameters(java.util.Map)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Bookmark</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.Bookmark from(java.lang.String)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Bookmark</className>
+        <differenceType>7012</differenceType>
+        <method>java.lang.String value()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.Set lastBookmarks()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncSession</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.Set lastBookmarks()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/exceptions/Neo4jException</className>
+        <differenceType>7002</differenceType>
+        <method>java.lang.String neo4jErrorCode()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/QueryRunner</className>
+        <differenceType>7012</differenceType>
+        <method>void close()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/AuthTokens</className>
+        <differenceType>7009</differenceType>
+        <method>AuthTokens()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/GraphDatabase</className>
+        <differenceType>7009</differenceType>
+        <method>GraphDatabase()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Records</className>
+        <differenceType>7009</differenceType>
+        <method>Records()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Values</className>
+        <differenceType>7006</differenceType>
+        <method>org.neo4j.driver.internal.value.BytesValue value(byte[])</method>
+        <to>org.neo4j.driver.Value</to>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/GraphDatabase</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.Driver routingDriver(java.lang.Iterable, org.neo4j.driver.AuthToken, org.neo4j.driver.Config)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/AuthTokens</className>
+        <differenceType>3003</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/GraphDatabase</className>
+        <differenceType>3003</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Query</className>
+        <differenceType>3003</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Records</className>
+        <differenceType>3003</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/types/TypeSystem</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.types.TypeSystem getDefault()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.BaseSession session(java.lang.Class)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.BaseSession session(java.lang.Class, org.neo4j.driver.SessionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.QueryTask queryTask(java.lang.String)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.BookmarkManager queryBookmarkManager()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.BookmarkManager queryBookmarkManager()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.BookmarkManager queryTaskBookmarkManager()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/summary/Notification</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.Optional severityLevel()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/summary/Notification</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.Optional rawSeverityLevel()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/summary/Notification</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.Optional category()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/summary/Notification</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.Optional rawCategory()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.QueryTask queryTask(java.lang.String)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.BookmarkManager queryTaskBookmarkManager()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Config</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.BookmarkManager queryTaskBookmarkManager()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Config$ConfigBuilder</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.Config$ConfigBuilder withQueryTaskBookmarkManager(org.neo4j.driver.BookmarkManager)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/QueryTask</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/QueryTask$ResultFinisher</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.ExecutableQuery executableQuery(java.lang.String)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.BookmarkManager executableQueryBookmarkManager()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/RoutingControl</className>
+        <differenceType>6001</differenceType>
+        <field>WRITERS</field>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/RoutingControl</className>
+        <differenceType>6001</differenceType>
+        <field>READERS</field>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/RoutingControl</className>
+        <differenceType>2000</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/RoutingControl</className>
+        <differenceType>4001</differenceType>
+        <to>java/lang/Comparable</to>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/RoutingControl</className>
+        <differenceType>4001</differenceType>
+        <to>java/lang/constant/Constable</to>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/RoutingControl</className>
+        <differenceType>5001</differenceType>
+        <to>java/lang/Enum</to>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.BaseSession session(java.lang.Class, org.neo4j.driver.AuthToken)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.BaseSession session(java.lang.Class, org.neo4j.driver.SessionConfig, org.neo4j.driver.AuthToken)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7012</differenceType>
+        <method>boolean verifyAuthentication(org.neo4j.driver.AuthToken)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7012</differenceType>
+        <method>boolean supportsSessionAuth()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/AuthToken</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.AuthTokenAndExpiration expiringAt(long)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/AuthTokenManager</className>
+        <differenceType>7012</differenceType>
+        <method>boolean handleSecurityException(org.neo4j.driver.AuthToken, org.neo4j.driver.exceptions.SecurityException)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/AuthTokenManager</className>
+        <differenceType>7002</differenceType>
+        <method>void onExpired(org.neo4j.driver.AuthToken)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/AuthTokenManagers</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.AuthTokenManager expirationBased(java.util.function.Supplier)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/AuthTokenManagers</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.AuthTokenManager expirationBasedAsync(java.util.function.Supplier)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/exceptions/TokenExpiredRetryableException</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/ExecutableQuery</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.ExecutableQuery withAuthToken(org.neo4j.driver.AuthToken)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/summary/ResultSummary</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.Set gqlStatusObjects()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/summary/Notification</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.Optional inputPosition()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/summary/Notification</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.Optional classification()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/summary/Notification</className>
+        <differenceType>7012</differenceType>
+        <method>java.util.Optional rawClassification()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/net/ServerAddress</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.net.ServerAddress of(java.lang.String)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Value</className>
+        <differenceType>7012</differenceType>
+        <method>java.lang.Object as(java.lang.Class)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Record</className>
+        <differenceType>7012</differenceType>
+        <method>java.lang.Object as(java.lang.Class)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.reactive.RxSession rxSession()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.reactive.RxSession rxSession(org.neo4j.driver.SessionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxQueryRunner</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxResult</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxSession</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxTransaction</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/reactive/RxTransactionWork</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Bookmark</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.Bookmark from(java.util.Set)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Bookmark</className>
+        <differenceType>7002</differenceType>
+        <method>boolean isEmpty()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Bookmark</className>
+        <differenceType>7002</differenceType>
+        <method>java.util.Set values()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.Bookmark lastBookmark()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncSession</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.Bookmark lastBookmark()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7002</differenceType>
+        <method>java.lang.Object readTransaction(org.neo4j.driver.TransactionWork)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7002</differenceType>
+        <method>java.lang.Object readTransaction(org.neo4j.driver.TransactionWork, org.neo4j.driver.TransactionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7002</differenceType>
+        <method>java.lang.Object writeTransaction(org.neo4j.driver.TransactionWork)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Session</className>
+        <differenceType>7002</differenceType>
+        <method>java.lang.Object writeTransaction(org.neo4j.driver.TransactionWork, org.neo4j.driver.TransactionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncSession</className>
+        <differenceType>7002</differenceType>
+        <method>java.util.concurrent.CompletionStage readTransactionAsync(org.neo4j.driver.async.AsyncTransactionWork)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncSession</className>
+        <differenceType>7002</differenceType>
+        <method>java.util.concurrent.CompletionStage readTransactionAsync(org.neo4j.driver.async.AsyncTransactionWork, org.neo4j.driver.TransactionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncSession</className>
+        <differenceType>7002</differenceType>
+        <method>java.util.concurrent.CompletionStage writeTransactionAsync(org.neo4j.driver.async.AsyncTransactionWork)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncSession</className>
+        <differenceType>7002</differenceType>
+        <method>java.util.concurrent.CompletionStage writeTransactionAsync(org.neo4j.driver.async.AsyncTransactionWork, org.neo4j.driver.TransactionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/TransactionWork</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/async/AsyncTransactionWork</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.async.AsyncSession asyncSession()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.async.AsyncSession asyncSession(org.neo4j.driver.SessionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.types.TypeSystem defaultTypeSystem()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.reactive.ReactiveSession reactiveSession()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Driver</className>
+        <differenceType>7002</differenceType>
+        <method>org.neo4j.driver.reactive.ReactiveSession reactiveSession(org.neo4j.driver.SessionConfig)</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Config$TrustStrategy</className>
+        <differenceType>7002</differenceType>
+        <method>java.io.File certFile()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/summary/Notification</className>
+        <differenceType>7002</differenceType>
+        <method>java.lang.String severity()</method>
+    </difference>
+
+    <difference>
+        <className>org/neo4j/driver/Logging</className>
+        <differenceType>7012</differenceType>
+        <method>org.neo4j.driver.Logging systemLogging()</method>
+    </difference>
+
+</differences>
